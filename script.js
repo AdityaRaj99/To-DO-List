@@ -10,7 +10,7 @@ var taskArr = [];
 var listToBeRemoved = null;
 var value ='';
 
-fetch('https://jsonplaceholder.typicode.com/todos').
+fetch().
 then(response=>response.json())
 .then(data=>{
 	data.map((item)=>{
