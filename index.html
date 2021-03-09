@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>To Do</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<main class="container">
+<h1 id="appHeading">To do list</h1>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" id="inputTask" onkeydown="onEnterAdd(event)" placeholder="Add Task Here" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button" onclick="addTask()">Add Task</button>
+    </div>
+</div>
+<div>
+    <ul id="TaskList" class="list-group list-group-flush">
+    </ul>
+</div>
+<div class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Do you want to delete the task?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="cancelDelete()">Close</button>
+        <button type="button" class="btn btn-primary" onclick="confirmDelete()">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+<script src="script.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js.map"></script>
+</body>
+</html>
